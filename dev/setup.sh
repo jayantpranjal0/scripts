@@ -7,3 +7,11 @@ if [ -f /etc/debian_version ]; then
 else
     echo "This script is only for Debian-based systems."
 fi
+
+# Run the script in ../git/setup.sh
+if [ -f ../git/setup.sh ]; then
+    echo "Running the setup script from ../git/setup.sh..."
+    bash ../git/setup.sh
+else
+    echo "The setup script ../git/setup.sh does not exist."
+fi
